@@ -6,12 +6,19 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    transform: scale(0.5);
+    transform-origin: center top; /*line fixes scale whitespace issue*/
+    border: 2px solid black;
 }
 
 .grid-square {
     /* height: 100px; */
-    width: calc(100%/7);
+    width: calc(100%/17);
     aspect-ratio: 1/ 1;
-    border: 2px solid black;
+    border: 2px solid lightgray;
+}
+
+.grid-square:hover {
+   background-color: lightgray;
 }
 
