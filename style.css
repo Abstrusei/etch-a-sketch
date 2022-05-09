@@ -2,23 +2,23 @@
     margin: 0;
 }
 
-#grid-square-container {
+.flex {
     display: flex;
+}
+
+#grid-square-container {
     flex-wrap: wrap;
     justify-content: center;
-    transform: scale(0.5);
+    transform: scale(0.4);
     transform-origin: center top; /*line fixes scale whitespace issue*/
-    border: 2px solid black;
+    border: 3px solid gray;
 }
 
 .grid-square {
-    /* height: 100px; */
-    width: calc(100%/17);
     aspect-ratio: 1/ 1;
-    border: 2px solid lightgray;
 }
 
-.grid-square:hover {
-   background-color: lightgray;
+.grid-square.colored {
+   background-color: black;
 }
 
