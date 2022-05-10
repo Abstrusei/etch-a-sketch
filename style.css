@@ -45,6 +45,12 @@ h1.container {
     margin: 0 5%;
 }
 
+
+#content {
+    justify-content: center;
+}
+
+/* CONTROL PANEL RELATED */
 .btn {
     height: 40px;
     width: 100%;
@@ -54,16 +60,13 @@ h1.container {
     margin-bottom: 25px;
     text-transform: uppercase;
     transition: all 0.25s ease-in-out;
+    transition-property: background-color, color;
 }
 
 
 .btn:hover {
     background-color: white;
     color: #044646;
-}
-
-#content {
-    justify-content: center;
 }
 
 #control-panel {
@@ -73,6 +76,11 @@ h1.container {
     margin-right: 50px;
 }
 
+#eraser-btn.eraser-on {
+    border: 2px solid white;
+}
+
+/* GRID RELATED */
 #grid-square-container {  
     height: var(--gridWidth, 450px);
     width: var(--gridWidth, 450px);
