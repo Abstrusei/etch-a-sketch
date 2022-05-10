@@ -80,6 +80,12 @@ h1.container {
     border: 2px solid white;
 }
 
+#color-picker {
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
 /* GRID RELATED */
 #grid-square-container {  
     height: var(--gridWidth, 450px);
