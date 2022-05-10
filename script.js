@@ -4,7 +4,7 @@ function createGridSquares(number) {
     for (let i = 0; i < (number * number); i++) {
         let gridSquare = document.createElement("div");
         gridSquare.classList.add('grid-square');
-        gridSquare.style.cssText = `width:calc(100%/${number + 1}); border: 2px solid lightgray;`
+        gridSquare.style.cssText = `border: 1px solid lightgray; height: calc(100%/${number}); display: inline-block;`
         gSContainer.appendChild(gridSquare);
     }
 }
