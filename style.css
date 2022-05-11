@@ -61,6 +61,7 @@ h1.container {
     text-transform: uppercase;
     transition: all 0.25s ease-in-out;
     transition-property: background-color, color;
+    cursor: pointer;
 }
 
 
@@ -84,6 +85,7 @@ h1.container {
     height: 40px;
     width: 100%;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 /* GRID RELATED */
