@@ -2,6 +2,8 @@ const gSContainer = document.getElementById("grid-square-container");
 const sliderCaption = document.getElementById("slider-caption");
 let numSquaresPerSide = 16;
 let eraserOn = false;
+let prevPenColor = "black";
+let penColor = 'black';
 
 function generateGrid(number) {
     if (gSContainer.innerHTML != "") {
@@ -31,20 +33,11 @@ function enableColoring() {
     const gridSquares = document.querySelectorAll('.grid-square');
     gridSquares.forEach(gridSquare => {
         gridSquare.addEventListener("mousedown", () => {
-            if (eraserOn && gridSquare.classList.contains('colored')) {
-                gridSquare.classList.remove('colored');
-            } else {
-                gridSquare.classList.add('colored');
-            }
+            gridSquare.style.backgroundColor = penColor;
         });
-
         gridSquare.addEventListener("mouseover", () => {
             if (mouseDown == true) {
-                if (eraserOn && gridSquare.classList.contains('colored')) {
-                    gridSquare.classList.remove('colored');
-                } else {
-                    gridSquare.classList.add('colored');
-                }
+                gridSquare.style.backgroundColor = penColor;
             }
         });
     });
@@ -58,6 +51,7 @@ function turnEraserOff() {
     if (eraserOn == true) {
         eraserBtn.classList.remove('eraser-on');
         eraserOn = false;
+        penColor = prevPenColor;
     }
 }
 
@@ -68,9 +62,12 @@ eraserBtn.addEventListener("click", () => {
     if (eraserOn == true) {
         eraserBtn.classList.remove('eraser-on');
         eraserOn = false;
+        penColor = prevPenColor;
     } else {
         eraserBtn.classList.add('eraser-on');
         eraserOn = true;
+        prevPenColor = penColor;
+        penColor = 'white';
     }
 })
 
@@ -86,6 +83,13 @@ const resetBtn = document.getElementById('reset-btn');
 resetBtn.addEventListener("click", () => {
     window.location.reload();
 })
+
+// Pick a color 
+let colorPicker = document.getElementById('color-picker');
+colorPicker.addEventListener("change", () => {
+    penColor = colorPicker.value;
+});
+
 
 // Range slider
 const rangeSlider = document.getElementById('range-slider');

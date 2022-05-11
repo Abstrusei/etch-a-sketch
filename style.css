@@ -103,10 +103,7 @@ h1.container {
     background-color: lightgrey;
 }
 
-.grid-square.colored {
-   background-color: black;
-}
-
+ 
 /* Slider */
 .slider {
     -webkit-appearance: none;  /* Override default CSS styles */
