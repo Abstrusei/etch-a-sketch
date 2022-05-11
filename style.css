@@ -45,6 +45,13 @@ h1.container {
     margin: 0 5%;
 }
 
+footer {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: lightgray;
+}
+
 
 #content {
     justify-content: center;
@@ -72,8 +79,9 @@ h1.container {
 
 #control-panel {
     /* border: 1px solid white; */
-    height: var(--gridWidth, 450px);
+    height: 30rem;
     width: 250px;
+    min-width: 150px;
     margin-right: 50px;
 }
 
@@ -90,8 +98,8 @@ h1.container {
 
 /* GRID RELATED */
 #grid-square-container {  
-    height: var(--gridWidth, 450px);
-    width: var(--gridWidth, 450px);
+    height: 36vw;
+    width: 36vw;
     font-size: 0;
 }
 
@@ -130,3 +138,20 @@ h1.container {
     background: #044646; /* Green background */
     cursor: pointer; /* Cursor on hover */
   }
+
+@media (max-width: 768px) {
+    #content {
+        flex-direction: column-reverse;
+    }
+
+    #control-panel {
+        margin-right: 0px;
+        width: 100%;
+    }
+
+    #grid-square-container {
+        width: 90vw;
+        height: 90vw;
+        margin-bottom: 30px;
+    }
+}

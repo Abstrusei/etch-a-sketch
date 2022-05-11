@@ -1,3 +1,3 @@
 # etch-a-sketch
 
-This is an Etch-A-Sketch for the browser built using Javascript, HTML and CSS. This project is a part of The Odin Project 'Foundations' course and was completed to help strengthen my Javascript abilities - DOM Manipulation in particular.  To use the Etch-A-Sketch simply...
+This is an Etch-A-Sketch for the browser built using Javascript, HTML and CSS. This project is a part of The Odin Project 'Foundations' course and was completed to help strengthen my Javascript abilities - DOM Manipulation in particular.  To use the Etch-A-Sketch simply click and drag the mouse to draw. You will also have the ability clear, reset, erase and change pen color using buttons on the left control panel. In the control panel you will also have the ability to change the amount of squares per side of the grid (using the slider).
